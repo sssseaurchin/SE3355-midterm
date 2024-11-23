@@ -1,4 +1,3 @@
-
 function validatePhone() {
     var phoneInput = document.getElementById('phone').value;
     var phonePattern = /^\+90\s\d{3}\s\d{3}\s\d{2}\s\d{2}$/;
