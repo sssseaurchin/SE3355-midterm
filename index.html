@@ -9,54 +9,55 @@
 </head>
 <body>
 
-<div class="background"></div>
-
 <div class="navbar">
     <ul>
-        <li><a href="BLANK1">Home</a></li>
-        <li><a href="BLANK2">Categories</a></li>
-        <li><a href="BLANK3">About</a></li>
-        <li><a href="BLANK4">Contact</a></li>
+        <li><a href="https://pokemondb.net/pokedex/gengar">Home</a></li>
+        <li><a href="https://pokemondb.net/pokedex/haunter">Categories</a></li>
+        <li><a href="https://pokemondb.net/pokedex/gastly">About</a></li>
+        <li><a href="https://pokemondb.net/pokedex/swalot">Contact</a></li>
     </ul>
 </div>
+<div class = "wrapper-main">
+    <div class="content-box">
+        <h1 class = "header-main">EDUCATION APPOINTMENT FORM</h1>
 
-<div class="content-box">
-    <h1>EDUCATION APPOINTMENT FORM</h1>
+        <form id="appointment-form">
 
-    <form id="appointment-form">
+            <input class="text-input" type="text" id="name" name="name" placeholder="Your name" required>
+            <input class="text-input" type="email" id="email" name="email" placeholder="Email" required>
+            <input class="text-input" type="text" id="phone" name="phone" placeholder="Phone number" required oninput="validatePhone()">
 
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <input type="text" id="phone" name="phone" placeholder="Phone number" required oninput="validatePhone()">
+            <!-- Course -->
+            <!-- City -->
 
-        <!-- Course -->
-        <!-- City -->
-
-        <h2>How would you like to be contacted?</h2>
-        <select class="custom-select" id="contact-method" name="contact-method">
-            <option value="email">By email</option>
-            <option value="phone">By phone</option>
-        </select>
-
-
-        <select id="hours" name="hours">
-            <option disabled value="0">Hours: 6am - 10pm</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
+            <h2 class="header-second">How would you like to be contacted?</h2>
+            <select class="custom-select" id="contact-method" name="contact-method">
+                <option value="email">By email</option>
+                <option value="phone">By phone</option>
+            </select>
 
 
-        <label for="agree">
-            <input type="checkbox" id="agree" name="agree" required>
-            I agree with the <a href="BLANK8">terms and conditions</a>
-        </label>
+            <select id="hours" name="hours">
+                <option disabled value="0">Hours: 6am - 10pm</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
 
-        <button type="submit">Request an appointment</button>
-    </form>
+
+            <div class="checkbox">
+                <label for="agree">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    I agree with the <a href="https://pokemondb.net/pokedex/dragonite">terms and conditions</a>
+                </label>
+            </div>
+
+            <button type="submit">Request an appointment</button>
+        </form>
+    </div>
 </div>
 
 </body>
