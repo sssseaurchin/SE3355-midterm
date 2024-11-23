@@ -9,71 +9,55 @@
 </head>
 <body>
 
-    <div class="background"></div>
+<div class="background"></div>
 
-    <div class="navbar">
-        <ul>
-            <li><a href="BLANK1">Home</a></li>
-            <li><a href="BLANK2">Categories</a></li>
-            <li><a href="BLANK3">About</a></li>
-            <li><a href="BLANK4">Contact</a></li>
-        </ul>
-    </div>
-  
-    <div class="content-box">
-        <h1>EDUCATION APPOINTMENT FORM</h1>
+<div class="navbar">
+    <ul>
+        <li><a href="BLANK1">Home</a></li>
+        <li><a href="BLANK2">Categories</a></li>
+        <li><a href="BLANK3">About</a></li>
+        <li><a href="BLANK4">Contact</a></li>
+    </ul>
+</div>
 
-        <form id="appointment-form">
+<div class="content-box">
+    <h1>EDUCATION APPOINTMENT FORM</h1>
 
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" required><br><br>
+    <form id="appointment-form">
 
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="text" id="phone" name="phone" placeholder="Phone number" required oninput="validatePhone()">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required><br><br>
+        <!-- Course -->
+        <!-- City -->
 
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" required oninput="validatePhone()"><br><br>
-
-            <!-- Course -->
-            <!-- City -->
+        <h2>How would you like to be contacted?</h2>
+        <select class="custom-select" id="contact-method" name="contact-method">
+            <option value="email">By email</option>
+            <option value="phone">By phone</option>
+        </select>
 
 
-            <h2>How would you like to be contacted?</h2>
+        <select id="hours" name="hours">
+            <option disabled value="0">Hours: 6am - 10pm</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
 
-            <label for="phone-contact">
-                <input type="checkbox" id="phone-contact" name="contact-method"> By phone
-            </label>
-            <label for="email-contact">
-                <input type="checkbox" id="email-contact" name="contact-method"> By email
-            </label><br><br>
 
-            <label for="rating">How would you rate our service?</label>
-            <select id="rating" name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select><br><br>
+        <label for="agree">
+            <input type="checkbox" id="agree" name="agree" required>
+            I agree with the <a href="BLANK8">terms and conditions</a>
+        </label>
 
-            <label for="agree">
-                <input type="checkbox" id="agree" name="agree" required>
-                I agree with the <a href="BLANK8">terms and conditions</a>
-            </label><br><br>
-
-            <button type="submit">Request an appointment</button>
-        </form>
-    </div>
-  
-<!--     <div class="ad" id="ad">
-        <img src="ad-image.jpg" alt="Advertisement" class="ad-image" onclick="window.open('BLANK9', '_blank')">
-        <span class="close-btn" onclick="closeAd()">X</span>
-    </div>
--->
+        <button type="submit">Request an appointment</button>
+    </form>
+</div>
 
 </body>
 </html>
