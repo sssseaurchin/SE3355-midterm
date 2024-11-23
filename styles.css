@@ -1,21 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Bahnschrift, sans-serif;
     position: relative;
-}
+    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('https://images.pexels.com/photos/2441454/pexels-photo-2441454.jpeg');
 
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-    z-index: -1;
 }
 
 .navbar {
@@ -42,58 +31,47 @@ body {
     text-decoration: none;
     font-size: 18px;
 }
+.wrapper-main {
+    margin: 50px 200px 50px;
+}
 
 .content-box {
-    width: 60%;
-    margin: 20px auto;
+    width: 30%;
     background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px darkslategray;
+}
+.text-input {
+    width: 95%;
+    padding: 10px;
+}
+.header-main {
+    font-size: 20px;
+}
+.header-second {
+    font-size: 18px;
 }
 
 .content-box h1 {
-    text-align: center;
+    text-align: left;
 }
 
-label {
+.label {
     display: block;
     margin: 10px 0 5px;
 }
+.checkbox {
+    horiz-align: center;
+    font-size: 12px;
+}
 
-input, select {
+.input, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid darkslateblue;
     border-radius: 5px;
-}
-
-.ad {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;
-    height: 400px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-}
-
-.ad-image {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
 }
 
 form {
