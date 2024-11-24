@@ -67,5 +67,6 @@ function checkDropDownSelection(event){
 }
 
 // function closeAd() {
+
 //     document.getElementById('ad').style.display = 'none';
 // }
