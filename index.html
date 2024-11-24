@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body onload="fetchData()">
 
 <div class="navbar">
     <ul>
@@ -21,14 +21,23 @@
     <div class="content-box">
         <h1 class = "header-main">EDUCATION APPOINTMENT FORM</h1>
 
-        <form id="appointment-form">
+        <form id="appointment-form" action="form-submitted.html" method="POST">
 
             <input class="text-input" type="text" id="name" name="name" placeholder="Your name" required>
             <input class="text-input" type="email" id="email" name="email" placeholder="Email" required>
-            <input class="text-input" type="text" id="phone" name="phone" placeholder="Phone number" required oninput="validatePhone()">
+            <div class="phone-container">
+                <span class="prefix">+90</span>
+                <input class="text-input" type="text" id="phone" name="phone" placeholder="Phone number" required>
+            </div>
 
-            <!-- Course -->
-            <!-- City -->
+            <select id = "courses" name="courses">
+                <option value="0" disabled selected>Course</option>
+            </select>
+
+            <select id="cities" name="cities">
+                <option value="0" disabled selected>City</option>
+            </select>
+
 
             <h2 class="header-second">How would you like to be contacted?</h2>
             <select class="custom-select" id="contact-method" name="contact-method">
@@ -37,8 +46,8 @@
             </select>
 
 
-            <select id="hours" name="hours">
-                <option disabled value="0">Hours: 6am - 10pm</option>
+            <select class="custom-select" id="hours" name="hours">
+                <option disabled selected value="0">Hours: 6am - 10pm</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -47,17 +56,26 @@
                 <option value="6">6</option>
             </select>
 
+
             <div class="checkbox">
                 <label for="agree">
                     <input type="checkbox" id="agree" name="agree" required>
-                    I agree with the <a href="https://pokemondb.net/pokedex/dragonite">terms and conditions</a>
+                    I agree with the <a href="https://pokemondb.net/pokedex/dragonite">Terms & Conditions</a>
                 </label>
             </div>
 
-            <button type="submit">Request an appointment</button>
+            <button class="button" type="submit" onclick="validatePhone(event); validateEmail(event); checkDropDownSelection(event)" >Request an appointment</button>
         </form>
     </div>
+    <div class="ad">
+        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1jQrUJ.img">
+    </div>
 </div>
+<!--     <div class="ad" id="ad">
+        <img src="ad-image.jpg" alt="Advertisement" class="ad-image" onclick="window.open('BLANK9', '_blank')">
+        <span class="close-btn" onclick="closeAd()">X</span>
+    </div>
+-->
 
 </body>
 </html>
