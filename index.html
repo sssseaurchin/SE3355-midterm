@@ -11,10 +11,10 @@
 
 <div class="navbar">
     <ul>
-        <li><a href="https://pokemondb.net/pokedex/gengar">Home</a></li>
-        <li><a href="https://pokemondb.net/pokedex/haunter">Categories</a></li>
-        <li><a href="https://pokemondb.net/pokedex/gastly">About</a></li>
-        <li><a href="https://pokemondb.net/pokedex/swalot">Contact</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </div>
 <div class = "wrapper-main">
@@ -23,6 +23,7 @@
 
         <form id="appointment-form" action="form-submitted.html" method="POST">
 
+            <input class="text-input" type="text" id="title" name="title" placeholder="Title" required>
             <input class="text-input" type="text" id="name" name="name" placeholder="Your name" required>
             <input class="text-input" type="email" id="email" name="email" placeholder="Email" required>
             <div class="phone-container">
@@ -31,7 +32,7 @@
             </div>
 
             <select id = "courses" name="courses">
-                <option value="0" disabled selected>Course</option>
+                <option value="0" disabled selected>Course Type</option>
             </select>
 
             <select id="cities" name="cities">
@@ -47,34 +48,36 @@
 
 
             <select class="custom-select" id="hours" name="hours">
-                <option disabled selected value="0">Hours: 6am - 10pm</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
+                <option disabled selected value="0">Hours</option>
+                <option value="1">6am - 8am</option>
+                <option value="2">8am - 10am</option>
+                <option value="3">10am - 12pm</option>
+                <option value="4">12pm - 2pm</option>
+                <option value="5">2pm - 4pm</option>
+                <option value="6">4pm - 6pm</option>
+                <option value="7">6pm - 8pm</option>
+                <option value="8">8pm - 10pm</option>
             </select>
+
+            <br><br>
 
             <div class="checkbox">
                 <label for="agree">
                     <input type="checkbox" id="agree" name="agree" required>
-                    I agree with the <a href="https://pokemondb.net/pokedex/dragonite">Terms & Conditions</a>
+                    I agree with the <a href="tac.html">Terms & Conditions</a>
                 </label>
             </div>
-
             <button class="button" type="submit" onclick="validatePhone(event); validateEmail(event); checkDropDownSelection(event)" >Request an appointment</button>
+            <br><br><br><br><br><br><br><br>
         </form>
     </div>
-    <div class="ad">
-        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1jQrUJ.img">
+    <div class="ad" id="ad">
+        <span class="close-button" onclick="closeAd()">✖</span>
+        <a href="https://youtube.com/">
+            <img src="ad.png">
+        </a>
     </div>
 </div>
-<!--     <div class="ad" id="ad">
-        <img src="ad-image.jpg" alt="Advertisement" class="ad-image" onclick="window.open('BLANK9', '_blank')">
-        <span class="close-btn" onclick="closeAd()">X</span>
-    </div>
--->
 
 </body>
 </html>

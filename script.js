@@ -1,5 +1,5 @@
 const apiURL = 'https://run.mocky.io/v3/8818bd3c-d3c0-44f3-8e7a-1dd0c1cf2c2c';
-
+// https://designer.mocky.io/manage/delete/8818bd3c-d3c0-44f3-8e7a-1dd0c1cf2c2c/mSZdUY48NbVdm5GG70rwgcyMbSmmP4cZDIfP
 async function fetchData() {
     try {
         const response = await fetch(apiURL);
@@ -59,14 +59,14 @@ function validateEmail(event) {
 function checkDropDownSelection(event){
         const dropdown1 = document.getElementById('courses');
         const dropdown2 = document.getElementById('cities');
+        const dropdown3 = document.getElementById('hours');
 
-        if (dropdown1.value == '0' || dropdown2.value == '0') {
-            alert('Please select valid options from both courses and cities dropdowns.');
+        if (dropdown1.value == '0' || dropdown2.value == '0' || dropdown3.value == '0') {
+            alert('Please select valid options from all dropdown menus.');
             event.preventDefault();
         }
 }
 
-// function closeAd() {
-
-//     document.getElementById('ad').style.display = 'none';
-// }
+function closeAd() {
+    document.getElementById('ad').style.display = 'none';
+}
